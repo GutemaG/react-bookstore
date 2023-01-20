@@ -39,3 +39,15 @@
 .nav-item .brand:hover {
   border-bottom: none;
 }
+
+.userIcon {
+  color: #0290ff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #0290ff;
+  cursor: pointer;
+}

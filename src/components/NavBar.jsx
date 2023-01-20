@@ -16,7 +16,9 @@ const NavBar = () => (
       </li>
     </ul>
     <button type="button" className="userIcon">
-      <span>ICON</span>
+      <span>
+        <i className="fa-solid fa-user user" />
+      </span>
     </button>
   </nav>
 );
