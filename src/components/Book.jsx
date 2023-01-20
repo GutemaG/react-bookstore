@@ -9,6 +9,19 @@ const Book = (props) => {
       <div className="book-info">
         <h3>{title}</h3>
         <p>{author}</p>
+        <div className="book-actions">
+          <button type="button" className="btn btn-comment">
+            Comments
+          </button>
+          |
+          <button type="button" className="btn btn-remove">
+            remove
+          </button>
+          |
+          <button type="button" className="btn btn-edit">
+            edit
+          </button>
+        </div>
       </div>
       <div className="book-progress">
         <h1>Book Progress</h1>

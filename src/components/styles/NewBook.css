@@ -11,8 +11,9 @@
   outline: none;
 }
 
-.input-title {
-  width: 50%;
+.input-title,
+.input-author {
+  width: 25%;
 }
 
 .category-input {

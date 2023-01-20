@@ -5,6 +5,7 @@ const NewBook = () => (
   <div>
     <form className="add-new-book-form">
       <input className="input input-title" placeholder="Book title" name="title" value="" />
+      <input className="input input-author" placeholder="Book Author" name="author" value="" />
       <select className="input category-input">
         <option value="action">Action</option>
         <option value="science-fiction">Science Fiction</option>
