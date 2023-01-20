@@ -1,0 +1,46 @@
+.book-list-container {
+  padding: 4%;
+}
+
+.book-list .book {
+  border: 1px solid #e8e8e8;
+  margin: 15px 0;
+}
+
+.book-container {
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.book-actions .btn {
+  border: none;
+  margin: 5px;
+  background: #fff;
+  color: #0290ff;
+  cursor: pointer;
+}
+
+.book-actions .btn:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.book-actions .btn-remove {
+  color: red;
+}
