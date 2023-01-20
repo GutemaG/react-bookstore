@@ -1,0 +1,17 @@
+.book-list-container {
+  padding: 4%;
+}
+
+.book-list .book {
+  border: 1px solid #e8e8e8;
+  margin: 15px 0;
+}
+
+.book-container {
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}

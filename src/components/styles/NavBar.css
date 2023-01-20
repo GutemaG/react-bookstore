@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.nav-brand a{
+.nav-brand a {
   font-size: 1.8rem;
   color: #0290ff;
   font-weight: bold;
@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.nav-item a{
+.nav-item a {
   padding: 10px 20px;
 }
 
@@ -42,7 +42,6 @@
 
 .userIcon {
   color: #0290ff;
-  border: none;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
