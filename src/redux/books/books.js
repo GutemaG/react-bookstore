@@ -4,9 +4,9 @@ const REMOVING_BOOK = 'books/REMOVING_BOOK';
 const bookReducer = (state = [], action = {}) => {
   switch (action.type) {
     case ADDING_BOOK:
-      return state;
+      return [...state, action.newBook];
     case REMOVING_BOOK:
-      return state;
+      return state.filter((prev, index) => index !== action.id);
     default:
       return state;
   }
