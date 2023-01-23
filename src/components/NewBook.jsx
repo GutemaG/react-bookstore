@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 import './styles/NewBook.css';
 
 const NewBook = () => {
+  // useDispatch hook
   const dispatch = useDispatch();
   const [book, setBook] = useState({
     title: '',
@@ -15,7 +17,7 @@ const NewBook = () => {
   };
   const addNewBook = (e) => {
     e.preventDefault();
-    dispatch(addBook(book));
+    dispatch(addBook({ ...book, id: uuidv4() }));
   };
   return (
     <div>
