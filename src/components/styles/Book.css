@@ -19,6 +19,7 @@
 .book-info {
   display: flex;
   flex-direction: column;
+  gap: 7px;
 }
 
 .book-actions {
@@ -43,4 +44,14 @@
 
 .book-actions .btn-remove {
   color: red;
+}
+
+.book-category {
+  color: #ccc;
+  text-transform: capitalize;
+}
+
+.book-author {
+  color: #0290ff;
+  font-style: italic;
 }

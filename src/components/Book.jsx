@@ -5,18 +5,24 @@ import { removeBook } from '../redux/books/books';
 import './styles/Book.css';
 
 const Book = (props) => {
-  const { title, author, index } = props;
+  const {
+    title,
+    author,
+    id,
+    category,
+  } = props;
   const dispatch = useDispatch();
 
   const remove = () => {
-    dispatch(removeBook(index));
+    dispatch(removeBook(id));
   };
 
   return (
     <div className="book-container">
       <div className="book-info">
-        <h3>{title}</h3>
-        <p>{author}</p>
+        <h4 className="book-category">{category}</h4>
+        <h3 className="book-title">{title}</h3>
+        <p className="book-author">{author}</p>
         <div className="book-actions">
           <button type="button" className="btn btn-comment">
             Comments
@@ -41,7 +47,8 @@ const Book = (props) => {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
