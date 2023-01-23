@@ -1,4 +1,4 @@
-const CHECKING_STATUS = 'categories/CHECKING_STATUS';
+const CHECKING_STATUS = 'react-bookstore/category/CHECKING_STATUS';
 
 const categoryReducer = (state = [], action = {}) => {
   switch (action.type) {
