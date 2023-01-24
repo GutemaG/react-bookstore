@@ -1,26 +1,10 @@
+import { apiAddBook, apiFetchBooks, apiRemoveBook } from '../../api/api';
+
 const ADDING_BOOK = 'react-bookstore/book/ADDING_BOOK';
 const REMOVING_BOOK = 'react-bookstore/book/REMOVING_BOOK';
+const FETCH_BOOKS = 'react-bookstore/book/FETCH_BOOK';
 
-const initialState = [
-  {
-    id: '1',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    category: 'Science Fiction',
-  },
-  {
-    id: '2',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    category: 'Science Fiction',
-  },
-  {
-    id: '3',
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    category: 'Economy',
-  },
-];
+const initialState = [];
 
 const bookReducer = (state = initialState, action = {}) => {
   switch (action.type) {
@@ -28,23 +12,39 @@ const bookReducer = (state = initialState, action = {}) => {
       return [...state, action.newBook];
     case REMOVING_BOOK:
       return state.filter((prev) => prev.id !== action.id);
+    case FETCH_BOOKS:
+      return action.books;
     default:
       return state;
   }
 };
 
-export const addBook = (newBook) => (
-  {
-    type: ADDING_BOOK,
-    newBook,
-  }
-);
+export const fetchBooks = () => async (dispatch) => {
+  const books = await apiFetchBooks();
+  dispatch({
+    type: FETCH_BOOKS,
+    books,
+  });
+};
 
-export const removeBook = (id) => (
-  {
-    type: REMOVING_BOOK,
-    id,
-  }
-);
+export const addBook = (newBook) => async (dispatch) => {
+  apiAddBook(newBook);
+  dispatch(
+    {
+      type: ADDING_BOOK,
+      newBook,
+    },
+  );
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  await apiRemoveBook(id);
+  dispatch(
+    {
+      type: REMOVING_BOOK,
+      id,
+    },
+  );
+};
 
 export default bookReducer;
