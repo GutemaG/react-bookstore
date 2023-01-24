@@ -5,7 +5,6 @@ import { addBook } from '../redux/books/books';
 import './styles/NewBook.css';
 
 const NewBook = () => {
-  // useDispatch hook
   const dispatch = useDispatch();
   const [book, setBook] = useState({
     title: '',
