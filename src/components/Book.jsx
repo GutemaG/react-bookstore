@@ -25,15 +25,15 @@ const Book = (props) => {
         <h3 className="book-title">{title}</h3>
         <p className="book-author">{author}</p>
         <div className="book-actions">
-          <button type="button" className="btn btn-comment">
+          <button type="button" className="btn-outlined btn-comment">
             Comments
           </button>
-          |
-          <button type="button" className="btn btn-remove" onClick={remove}>
+          <div className="vertical-divider" />
+          <button type="button" className="btn-outlined btn-remove" onClick={remove}>
             remove
           </button>
-          |
-          <button type="button" className="btn btn-edit">
+          <div className="vertical-divider" />
+          <button type="button" className="btn-outlined btn-edit">
             edit
           </button>
         </div>
