@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 import './styles/Book.css';
+import BookProgress from './BookProgress';
 
 const Book = (props) => {
   const {
@@ -38,7 +39,7 @@ const Book = (props) => {
         </div>
       </div>
       <div className="book-progress">
-        <h1>Book Progress</h1>
+        <BookProgress />
       </div>
     </div>
   );
