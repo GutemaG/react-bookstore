@@ -25,7 +25,7 @@ const Books = () => {
             </li>
           )) : <h1>No Books</h1> }
         </ul>
-        <hr />
+        <hr className="horizontal-divider" />
         <div className="add-new-book">
           <h1>Add New Book</h1>
           <NewBook />

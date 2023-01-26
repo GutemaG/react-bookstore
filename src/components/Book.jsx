@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 import './styles/Book.css';
+import BookProgress from './BookProgress';
 
 const Book = (props) => {
   const {
@@ -24,21 +25,21 @@ const Book = (props) => {
         <h3 className="book-title">{title}</h3>
         <p className="book-author">{author}</p>
         <div className="book-actions">
-          <button type="button" className="btn btn-comment">
+          <button type="button" className="btn-outlined btn-comment">
             Comments
           </button>
-          |
-          <button type="button" className="btn btn-remove" onClick={remove}>
+          <div className="vertical-divider" />
+          <button type="button" className="btn-outlined btn-remove" onClick={remove}>
             remove
           </button>
-          |
-          <button type="button" className="btn btn-edit">
+          <div className="vertical-divider" />
+          <button type="button" className="btn-outlined btn-edit">
             edit
           </button>
         </div>
       </div>
       <div className="book-progress">
-        <h1>Book Progress</h1>
+        <BookProgress />
       </div>
     </div>
   );
